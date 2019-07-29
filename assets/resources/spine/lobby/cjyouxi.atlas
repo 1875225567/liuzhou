@@ -1,0 +1,75 @@
+
+cjyouxi.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 134
+  size: 507, 137
+  orig: 507, 137
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 528, 39
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 528, 55
+  size: 55, 24
+  orig: 55, 24
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 2, 5
+  size: 497, 127
+  orig: 497, 127
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 511, 172
+  size: 155, 99
+  orig: 155, 99
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 607, 73
+  size: 45, 50
+  orig: 45, 50
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 501, 16
+  size: 25, 63
+  orig: 25, 63
+  offset: 0, 0
+  index: -1
+6
+  rotate: true
+  xy: 668, 2
+  size: 269, 83
+  orig: 269, 83
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 607, 120
+  size: 59, 50
+  orig: 59, 50
+  offset: 0, 0
+  index: -1
+8
+  rotate: true
+  xy: 511, 81
+  size: 89, 94
+  orig: 89, 94
+  offset: 0, 0
+  index: -1

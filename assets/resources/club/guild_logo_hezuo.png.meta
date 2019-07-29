@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "3af61cac-ff0b-4465-99b5-cbb59dcb1437",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "guild_logo_hezuo": {
+      "ver": "1.0.3",
+      "uuid": "fa9da0fe-a225-4a96-a20a-9b4428789b17",
+      "rawTextureUuid": "3af61cac-ff0b-4465-99b5-cbb59dcb1437",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 28,
+      "height": 28,
+      "rawWidth": 28,
+      "rawHeight": 28,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

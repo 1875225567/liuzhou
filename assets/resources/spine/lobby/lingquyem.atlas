@@ -1,0 +1,33 @@
+
+lingquyem.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+4
+  rotate: false
+  xy: 2, 204
+  size: 386, 361
+  orig: 386, 361
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 390, 210
+  size: 347, 355
+  orig: 347, 355
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 550, 2
+  size: 199, 206
+  orig: 199, 206
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 2, 73
+  size: 546, 129
+  orig: 546, 129
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,55 @@
+
+sccaishen.png
+size: 316,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+10
+  rotate: false
+  xy: 164, 2
+  size: 81, 64
+  orig: 81, 64
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 152, 95
+  size: 162, 172
+  orig: 162, 172
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 93, 7
+  size: 69, 49
+  orig: 69, 49
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 247, 44
+  size: 66, 49
+  orig: 66, 49
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 2, 58
+  size: 148, 209
+  orig: 148, 209
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 152, 68
+  size: 17, 25
+  orig: 17, 25
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 2, 8
+  size: 89, 48
+  orig: 89, 48
+  offset: 0, 0
+  index: -1

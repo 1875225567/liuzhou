@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "f3da4f42-8a07-47b6-9c7f-890d9c9abee9",
+  "atlasJson": "{\"SubTexture\":[{\"width\":167,\"y\":1,\"height\":186,\"name\":\"shan\",\"x\":339},{\"width\":336,\"y\":1,\"height\":633,\"name\":\"shen\",\"x\":1},{\"width\":193,\"y\":636,\"height\":109,\"name\":\"shou\",\"x\":1},{\"width\":120,\"y\":489,\"height\":56,\"name\":\"yan2\",\"x\":339},{\"width\":124,\"y\":424,\"height\":63,\"name\":\"yan1\",\"x\":339},{\"width\":130,\"y\":189,\"height\":233,\"name\":\"hands\",\"x\":339}],\"width\":512,\"imagePath\":\"gril_tex.png\",\"height\":1024,\"name\":\"gril\"}",
+  "texture": "4aebad95-8849-410d-b01c-107fd39b91a3",
+  "subMetas": {}
+}

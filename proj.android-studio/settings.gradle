@@ -1,0 +1,4 @@
+include ':libcocos2dx'
+project(':libcocos2dx').projectDir = new File('D:/CocosCreator2_0_9/resources/cocos2d-x/cocos/platform/android/libcocos2dx')
+include ':lzmj'
+project(':lzmj').projectDir = new File(settingsDir, 'app')

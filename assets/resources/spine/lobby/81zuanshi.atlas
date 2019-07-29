@@ -1,0 +1,96 @@
+
+81zuanshi.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2
+  rotate: false
+  xy: 2, 15
+  size: 84, 85
+  orig: 84, 85
+  offset: 0, 0
+  index: -1
+zsx00
+  rotate: false
+  xy: 88, 52
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx01
+  rotate: false
+  xy: 151, 52
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx02
+  rotate: false
+  xy: 214, 52
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx03
+  rotate: false
+  xy: 277, 52
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx04
+  rotate: false
+  xy: 340, 52
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx05
+  rotate: false
+  xy: 403, 52
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx06
+  rotate: false
+  xy: 88, 2
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx07
+  rotate: false
+  xy: 151, 2
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx08
+  rotate: false
+  xy: 214, 2
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx09
+  rotate: false
+  xy: 277, 2
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx10
+  rotate: false
+  xy: 340, 2
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+zsx11
+  rotate: false
+  xy: 403, 2
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1

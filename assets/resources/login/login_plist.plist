@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>login/000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{968,150},{31,31}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{31,31}</string>
+			</dict>
+			<key>login/001.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{968,115},{37,33}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{37,33}</string>
+			</dict>
+			<key>login/002.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{968,1},{54,112}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{54,112}</string>
+			</dict>
+			<key>login/003.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{943,299},{73,75}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{73,75}</string>
+			</dict>
+			<key>login/004.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{876,299},{197,65}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{197,65}</string>
+			</dict>
+			<key>login/005.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{485,1},{297,90}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{297,90}</string>
+			</dict>
+			<key>login/006.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{876,1},{296,90}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{296,90}</string>
+			</dict>
+			<key>login/007.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{784,1},{297,90}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{297,90}</string>
+			</dict>
+			<key>login/008.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{482,188}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{482,188}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>login_plist.png</string>
+			<key>realTextureFileName</key>
+			<string>login_plist.png</string>
+			<key>size</key>
+			<string>{1024,512}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1024</integer>
+			<key>height</key>
+			<integer>512</integer>
+		</dict>
+	</dict>
+</plist>

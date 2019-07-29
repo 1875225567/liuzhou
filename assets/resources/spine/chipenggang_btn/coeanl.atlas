@@ -1,0 +1,33 @@
+
+coeanl.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3
+  rotate: false
+  xy: 2, 2
+  size: 86, 64
+  orig: 86, 64
+  offset: 0, 0
+  index: -1
+image1
+  rotate: false
+  xy: 2, 68
+  size: 176, 167
+  orig: 176, 167
+  offset: 0, 0
+  index: -1
+image2
+  rotate: false
+  xy: 336, 135
+  size: 98, 100
+  orig: 98, 100
+  offset: 0, 0
+  index: -1
+image3
+  rotate: false
+  xy: 180, 81
+  size: 154, 154
+  orig: 154, 154
+  offset: 0, 0
+  index: -1

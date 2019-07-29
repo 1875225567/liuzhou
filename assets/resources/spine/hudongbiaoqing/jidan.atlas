@@ -1,0 +1,47 @@
+
+jidan.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+egg1
+  rotate: false
+  xy: 2, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+egg2
+  rotate: false
+  xy: 2, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+egg3
+  rotate: false
+  xy: 94, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+egg4
+  rotate: false
+  xy: 94, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+egg5
+  rotate: false
+  xy: 186, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+egg6
+  rotate: false
+  xy: 186, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1

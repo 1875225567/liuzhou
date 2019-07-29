@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>entertainment_res/entertainment_gou.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{915,318},{29,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{29,28}</string>
+			</dict>
+			<key>entertainment_res/entertainment_no_receive.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{955,0},{195,64}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{195,64}</string>
+			</dict>
+			<key>entertainment_res/entertainment_receive.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{955,195},{195,64}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{195,64}</string>
+			</dict>
+			<key>entertainment_res/entertainment_record_btn.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{847,167},{158,22}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{158,22}</string>
+			</dict>
+			<key>entertainment_res/entertainment_record_title.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{523,467},{260,42}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{260,42}</string>
+			</dict>
+			<key>entertainment_res/entertainment_red_package.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{195,167},{145,179}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{145,179}</string>
+			</dict>
+			<key>entertainment_res/entertainment_share.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,390},{195,81}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{195,81}</string>
+			</dict>
+			<key>entertainment_res/entertainment_star.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{882,167}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{882,167}</string>
+			</dict>
+			<key>entertainment_res/entertainment_time.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,471},{523,30}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{523,30}</string>
+			</dict>
+			<key>entertainment_res/entertainment_title.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{882,0},{73,318}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{73,318}</string>
+			</dict>
+			<key>entertainment_res/entertainment_title2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,346},{41,195}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{41,195}</string>
+			</dict>
+			<key>entertainment_res/entertainment_to_receive.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{869,318},{120,46}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{120,46}</string>
+			</dict>
+			<key>entertainment_res/entertainment_close.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{847,438},{62,62}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{62,62}</string>
+			</dict>
+			<key>entertainment_res/entertainment_tip.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{909,438},{54,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{54,54}</string>
+			</dict>
+			<key>entertainment_res/entertainment_logo1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{783,467},{45,49}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{45,49}</string>
+			</dict>
+			<key>entertainment_res/entertainment_title3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{523,318},{149,324}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{149,324}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>entertainment.png</string>
+			<key>realTextureFileName</key>
+			<string>entertainment.png</string>
+			<key>size</key>
+			<string>{1019,512}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1019</integer>
+			<key>height</key>
+			<integer>512</integer>
+		</dict>
+	</dict>
+</plist>
