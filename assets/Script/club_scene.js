@@ -337,9 +337,10 @@ cc.Class({
             case 'auto_open':
             case 'auto_close':
             {
-                let auto = cc.find("recharge/auto_pop",this.node);
-                if(auto.active) auto.active = false;
-                else auto.active = true;
+                //let auto = cc.find("recharge/auto_pop",this.node);
+                //if(auto.active) auto.active = false;
+                //else auto.active = true;
+                cc.loadingControl.onToggleView('notice_layer', '此功能正在开发中，敬请期待');
                 break;
             }
         }

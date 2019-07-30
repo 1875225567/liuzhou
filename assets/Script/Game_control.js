@@ -238,7 +238,6 @@ cc.Class({
             }
             case 'restart':
             {
-                cc.log(457889);
                 cc.loadingControl.onToggleView('notice_layer', '您是否要刷新游戏？', function(){
                     cc.game.restart()
                 });

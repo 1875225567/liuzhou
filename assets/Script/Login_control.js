@@ -41,6 +41,15 @@ cc.Class({
         this.isLoad = true;
         cc.loginControl = this;
         cc.loadingControl.fadeOutMask(this.main_node, 'Login_control');
+        this.getLongest();
+    },
+
+    getLongest:function(){
+        let arr = [];
+        let arr_0 = [1,3,5,10,2,5,10,78,1,562,156,5];
+        for(let i = 0; i < arr_0.length; i++){
+            let num = arr_0[i];
+        }
     },
 
     onOpenView: function () {

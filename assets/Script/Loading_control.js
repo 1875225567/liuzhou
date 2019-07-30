@@ -272,7 +272,7 @@ cc.Class({
      */
     updateHeartbeat: function () {
         cc.vv.WebSocket.sendWS('RoomController', 'heartbeat', {
-            'mid': cc.vv.userData.mid,
+            'mid': cc.vv.userData.mid
             // 'room_id': cc.vv.Global.room_id
         })
     },

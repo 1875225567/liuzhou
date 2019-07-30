@@ -48,19 +48,21 @@ cc.Class({
         cc.vv.audioMgr.playSFX('ui_open', 'mp3');
         switch (type.toString()) {
             case 'back':
-                {
-                    this.onClickView();
-                    break;
-                }
+            {
+                this.onClickView();
+                break;
+            }
             case 'shop_0':
             case 'shop_1':
             case 'shop_2':
             case 'shop_3':
-                {
-                    var arr = type.toString().split('_');
-                    var index = parseInt(arr[1]);
-                    break;
-                }
+            {
+                //var arr = type.toString().split('_');
+                //var index = parseInt(arr[1]);
+                this.onClickView();
+                cc.hallControl.onToggleView("kefu_layer");
+                break;
+            }
         }
     },
 

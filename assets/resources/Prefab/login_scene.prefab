@@ -3849,7 +3849,7 @@
       "__id__": 92
     },
     "_children": [],
-    "_active": false,
+    "_active": true,
     "_level": 3,
     "_components": [
       {
@@ -3880,7 +3880,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": -126,
-      "y": 10,
+      "y": -15,
       "z": 0
     },
     "_scale": {
@@ -3947,7 +3947,7 @@
       "__id__": 92
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -4240,7 +4240,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 250,
+      "width": 248,
       "height": 50
     },
     "_anchorPoint": {
@@ -4250,7 +4250,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -125,
+      "x": -123,
       "y": 25,
       "z": 0
     },
@@ -4338,7 +4338,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 250,
+      "width": 248,
       "height": 50
     },
     "_anchorPoint": {
@@ -4348,7 +4348,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -115,
+      "x": -123,
       "y": 25,
       "z": 0
     },
@@ -4384,7 +4384,7 @@
     "_string": "请输入手机号",
     "_N$string": "请输入手机号",
     "_fontSize": 24,
-    "_lineHeight": 40,
+    "_lineHeight": 50,
     "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -4494,7 +4494,7 @@
         "__id__": 133
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 3,
     "_components": [
       {
@@ -4525,7 +4525,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 57,
-      "y": 10,
+      "y": -15,
       "z": 0
     },
     "_scale": {
@@ -4679,7 +4679,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 250,
+      "width": 248,
       "height": 50
     },
     "_anchorPoint": {
@@ -4689,7 +4689,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -125,
+      "x": -123,
       "y": 25,
       "z": 0
     },
@@ -4777,7 +4777,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 250,
+      "width": 248,
       "height": 50
     },
     "_anchorPoint": {
@@ -4787,7 +4787,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -115,
+      "x": -123,
       "y": 25,
       "z": 0
     },
@@ -4823,7 +4823,7 @@
     "_string": "请输入验证码",
     "_N$string": "请输入验证码",
     "_fontSize": 24,
-    "_lineHeight": 40,
+    "_lineHeight": 50,
     "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -4933,7 +4933,7 @@
         "__id__": 146
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -5118,7 +5118,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 250,
+      "width": 248,
       "height": 50
     },
     "_anchorPoint": {
@@ -5128,7 +5128,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -125,
+      "x": -123,
       "y": 25,
       "z": 0
     },
@@ -5216,7 +5216,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 250,
+      "width": 248,
       "height": 50
     },
     "_anchorPoint": {
@@ -5226,7 +5226,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -115,
+      "x": -123,
       "y": 25,
       "z": 0
     },
@@ -5262,7 +5262,7 @@
     "_string": "请输入6位的数字密码",
     "_N$string": "请输入6位的数字密码",
     "_fontSize": 24,
-    "_lineHeight": 40,
+    "_lineHeight": 50,
     "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -5399,8 +5399,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": -116,
+      "x": -110,
+      "y": -130,
       "z": 0
     },
     "_scale": {
@@ -5654,7 +5654,7 @@
         "__id__": 161
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 3,
     "_components": [
       {
@@ -5688,7 +5688,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 110,
-      "y": -147,
+      "y": -129,
       "z": 0
     },
     "_scale": {
