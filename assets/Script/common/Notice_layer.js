@@ -27,6 +27,7 @@ cc.Class({
         this.isShowing = true;
         this.callBackFunc = callback;
         this.lab.string = msg;
+        this.showBtn();
         var bg = this.node.getChildByName('bg');
         bg.scale = 0;
         bg.runAction(cc.sequence(
@@ -35,6 +36,21 @@ cc.Class({
                 this.isShowing = false;
             }.bind(this))
         ));
+    },
+
+    showBtn:function(){
+        let btn1 = cc.find("bg/btn1",this.node);
+        let btn2 = cc.find("bg/btn2",this.node);
+        let btn3 = cc.find("bg/btn3",this.node);
+        if(null == this.callBackFunc){
+            btn1.active = false;
+            btn2.active = false;
+            btn3.active = true;
+        }else{
+            btn1.active = true;
+            btn2.active = true;
+            btn3.active = false;
+        }
     },
 
     onClickView: function (bool) {

@@ -41,15 +41,38 @@ cc.Class({
         this.isLoad = true;
         cc.loginControl = this;
         cc.loadingControl.fadeOutMask(this.main_node, 'Login_control');
-        this.getLongest();
     },
 
     getLongest:function(){
+        let arr_0 = [1,3,5,10,8,2,5,10,62,78,1,9,562,15,25,5,6,3];
         let arr = [];
-        let arr_0 = [1,3,5,10,2,5,10,78,1,562,156,5];
         for(let i = 0; i < arr_0.length; i++){
-            let num = arr_0[i];
+            let arr_1 = [arr_0[i]];
+            for(let j = i + 1; j < arr_0.length; j++){
+                let num = arr_1[arr_1.length - 1];
+                let num_0 = arr_0[j];
+                if(num < num_0){
+                    arr_1.push(num_0);
+                    arr_0.splice(j,1);
+                    j--;
+                }else{
+                    break;
+                }
+            }
+            arr.push(arr_1);
         }
+        cc.log(arr);
+        let longest_arr = null;
+        for(let i = 0; i < arr.length; i++){
+            longest_arr = arr[i];
+            for(let j = 0; j < arr.length; j++){
+                let num_0 = arr[j];
+                if(longest_arr.length < num_0.length){
+                    longest_arr = num_0;
+                }
+            }
+        }
+        cc.log(longest_arr);
     },
 
     onOpenView: function () {
@@ -193,7 +216,7 @@ cc.Class({
     /**
      * 没有声音的打开界面
      */
-    onToggleView: function (type, data, callback) {
+    onToggleView: function (type) {
         switch (type) {
             case "xieyi_layer": //协议
             {
