@@ -1,0 +1,117 @@
+
+jinbichang.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 300, 2
+  size: 283, 99
+  orig: 283, 99
+  offset: 0, 0
+  index: -1
+jb1
+  rotate: false
+  xy: 2, 237
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb15
+  rotate: false
+  xy: 2, 237
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb10
+  rotate: false
+  xy: 151, 103
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb11
+  rotate: false
+  xy: 300, 103
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb12
+  rotate: false
+  xy: 449, 103
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb13
+  rotate: false
+  xy: 2, 36
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb14
+  rotate: false
+  xy: 151, 36
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb2
+  rotate: false
+  xy: 151, 237
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb3
+  rotate: false
+  xy: 300, 237
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb4
+  rotate: false
+  xy: 449, 237
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb5
+  rotate: false
+  xy: 2, 170
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb6
+  rotate: false
+  xy: 151, 170
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb7
+  rotate: false
+  xy: 300, 170
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb8
+  rotate: false
+  xy: 449, 170
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1
+jb9
+  rotate: false
+  xy: 2, 103
+  size: 147, 65
+  orig: 147, 65
+  offset: 0, 0
+  index: -1

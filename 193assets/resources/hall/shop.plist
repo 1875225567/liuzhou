@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>shop/000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,370},{273,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{273,80}</string>
+			</dict>
+			<key>shop/001.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{198,367}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{198,367}</string>
+			</dict>
+			<key>shop/002.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,868},{69,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{69,73}</string>
+			</dict>
+			<key>shop/003.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,764},{102,89}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{102,89}</string>
+			</dict>
+			<key>shop/004.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{83,490},{143,84}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{143,84}</string>
+			</dict>
+			<key>shop/005.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,645},{117,104}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{117,104}</string>
+			</dict>
+			<key>shop/006.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{83,370},{118,102}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{118,102}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>shop.png</string>
+			<key>realTextureFileName</key>
+			<string>shop.png</string>
+			<key>size</key>
+			<string>{256,1024}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>256</integer>
+			<key>height</key>
+			<integer>1024</integer>
+		</dict>
+	</dict>
+</plist>

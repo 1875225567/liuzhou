@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "d4296247-c877-4f3a-a3bc-b3bdc5769b0c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "guild_qunzhu": {
+      "ver": "1.0.3",
+      "uuid": "17a78fee-3686-4196-8b56-906717cc3061",
+      "rawTextureUuid": "d4296247-c877-4f3a-a3bc-b3bdc5769b0c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 51,
+      "height": 21,
+      "rawWidth": 51,
+      "rawHeight": 21,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

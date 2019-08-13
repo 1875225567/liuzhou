@@ -1,0 +1,82 @@
+
+feiwen.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+kiss1
+  rotate: false
+  xy: 2, 186
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+kiss10
+  rotate: false
+  xy: 186, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+kiss11
+  rotate: false
+  xy: 186, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+kiss2
+  rotate: false
+  xy: 2, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+kiss3
+  rotate: false
+  xy: 94, 186
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+kiss4
+  rotate: false
+  xy: 2, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+kiss5
+  rotate: false
+  xy: 2, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+kiss6
+  rotate: false
+  xy: 94, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+kiss7
+  rotate: false
+  xy: 94, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+kiss8
+  rotate: false
+  xy: 186, 186
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+kiss9
+  rotate: false
+  xy: 94, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1

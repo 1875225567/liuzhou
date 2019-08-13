@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "e95a7b39-cfd9-4fde-9c97-037fdc696b80",
+  "atlasJson": "{\"width\":64,\"imagePath\":\"huaban_tex.png\",\"height\":64,\"name\":\"huaban\",\"SubTexture\":[{\"width\":19,\"y\":1,\"height\":31,\"name\":\"huabanban_01\",\"x\":1},{\"width\":19,\"y\":1,\"height\":31,\"name\":\"huabanban_02\",\"x\":22}]}",
+  "texture": "4e596bea-0112-48f5-835e-7d59d094c205",
+  "subMetas": {}
+}

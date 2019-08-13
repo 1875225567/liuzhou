@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "5bcf29fc-82a0-47c1-8d03-8ddb73a41219",
+  "atlasJson": "{\"width\":64,\"SubTexture\":[{\"width\":19,\"y\":1,\"height\":31,\"name\":\"huabanban_01\",\"x\":1},{\"width\":19,\"y\":1,\"height\":31,\"name\":\"huabanban_02\",\"x\":22}],\"height\":64,\"name\":\"NewProject_1_ske\",\"imagePath\":\"NewProject_1_ske_tex.png\"}",
+  "texture": "6248f8ac-5ac1-421d-b707-03b59c953bc9",
+  "subMetas": {}
+}

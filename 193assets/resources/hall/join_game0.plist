@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>join_game/join_game_0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{739,135},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{739,265},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{739,395},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{739,525},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{739,655},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,723},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{132,723},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{262,723},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_8.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{392,723},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_9.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{522,723},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{733,717}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{733,717}</string>
+			</dict>
+			<key>join_game/join_game_del.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{709,785},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_fanhui.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,910},{103,136}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{103,136}</string>
+			</dict>
+			<key>join_game/join_game_guangbiao.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{993,2},{4,50}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{4,50}</string>
+			</dict>
+			<key>join_game/join_game_re_input.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{522,853},{183,126}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{183,126}</string>
+			</dict>
+			<key>join_game/join_game_zhuye.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{739,2},{129,250}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{129,250}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>join_game0.png</string>
+			<key>realTextureFileName</key>
+			<string>join_game0.png</string>
+			<key>size</key>
+			<string>{999,1015}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>999</integer>
+			<key>height</key>
+			<integer>1015</integer>
+		</dict>
+	</dict>
+</plist>

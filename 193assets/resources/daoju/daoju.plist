@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>daoju/001.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{935,1},{123,67}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{123,67}</string>
+			</dict>
+			<key>daoju/002.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{448,1},{250,106}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{250,106}</string>
+			</dict>
+			<key>daoju/003.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{700,1},{233,102}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{233,102}</string>
+			</dict>
+			<key>daoju/004.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{646,109},{28,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{28,28}</string>
+			</dict>
+			<key>daoju/005.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{566,137},{28,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{28,28}</string>
+			</dict>
+			<key>daoju/006.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{700,105},{142,130}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{142,130}</string>
+			</dict>
+			<key>daoju/007.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{448,109},{116,102}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{116,102}</string>
+			</dict>
+			<key>daoju/008.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{844,105},{156,52}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{156,52}</string>
+			</dict>
+			<key>daoju/009.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{954,245},{48,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{48,54}</string>
+			</dict>
+			<key>daoju/010.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{954,195},{48,56}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{48,56}</string>
+			</dict>
+			<key>daoju/011.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{926,126},{77,67}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{77,67}</string>
+			</dict>
+			<key>daoju/012.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{898,225},{78,26}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,26}</string>
+			</dict>
+			<key>daoju/013.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{954,295},{78,26}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,26}</string>
+			</dict>
+			<key>daoju/014.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{898,105},{118,26}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{118,26}</string>
+			</dict>
+			<key>daoju/015.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{982,295},{78,26}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,26}</string>
+			</dict>
+			<key>daoju/016.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{566,109},{78,26}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{78,26}</string>
+			</dict>
+			<key>daoju/017.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{926,195},{118,26}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{118,26}</string>
+			</dict>
+			<key>daoju/018.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{445,275}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{445,275}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>daoju.png</string>
+			<key>realTextureFileName</key>
+			<string>daoju.png</string>
+			<key>size</key>
+			<string>{1024,512}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1024</integer>
+			<key>height</key>
+			<integer>512</integer>
+		</dict>
+	</dict>
+</plist>

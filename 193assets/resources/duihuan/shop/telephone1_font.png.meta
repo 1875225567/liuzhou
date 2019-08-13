@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "394104c9-5f7e-4340-96db-d9591bb05bdc",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "telephone1_font": {
+      "ver": "1.0.3",
+      "uuid": "7ed784d0-7e00-458f-b2a4-df7011ac440b",
+      "rawTextureUuid": "394104c9-5f7e-4340-96db-d9591bb05bdc",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 1,
+      "trimY": 1,
+      "width": 166,
+      "height": 42,
+      "rawWidth": 168,
+      "rawHeight": 44,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

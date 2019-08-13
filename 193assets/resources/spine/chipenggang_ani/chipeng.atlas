@@ -1,0 +1,26 @@
+
+chipeng.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chi
+  rotate: false
+  xy: 2, 8
+  size: 166, 166
+  orig: 166, 166
+  offset: 0, 0
+  index: -1
+gang
+  rotate: true
+  xy: 170, 6
+  size: 168, 162
+  orig: 168, 162
+  offset: 0, 0
+  index: -1
+peng
+  rotate: true
+  xy: 334, 2
+  size: 172, 153
+  orig: 172, 153
+  offset: 0, 0
+  index: -1

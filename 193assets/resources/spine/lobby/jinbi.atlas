@@ -1,0 +1,96 @@
+
+jinbi.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2
+  rotate: false
+  xy: 2, 12
+  size: 84, 85
+  orig: 84, 85
+  offset: 0, 0
+  index: -1
+gx00
+  rotate: false
+  xy: 88, 50
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx01
+  rotate: false
+  xy: 136, 50
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx02
+  rotate: false
+  xy: 184, 50
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx03
+  rotate: false
+  xy: 232, 50
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx04
+  rotate: false
+  xy: 280, 50
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx05
+  rotate: false
+  xy: 328, 50
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx06
+  rotate: true
+  xy: 88, 2
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx07
+  rotate: true
+  xy: 137, 2
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx08
+  rotate: true
+  xy: 186, 2
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx09
+  rotate: true
+  xy: 235, 2
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx10
+  rotate: true
+  xy: 284, 2
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+gx11
+  rotate: true
+  xy: 333, 2
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1

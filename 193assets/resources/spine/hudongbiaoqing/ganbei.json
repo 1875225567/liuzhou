@@ -1,0 +1,64 @@
+{
+"skeleton": { "hash": "BnFIX1uSaNKSJ2s4Q8M8X/dzTes", "spine": "2.1.27", "width": 90, "height": 90, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" }
+],
+"slots": [
+	{ "name": "hfgj", "bone": "bone", "attachment": "cheers1" }
+],
+"skins": {
+	"default": {
+		"hfgj": {
+			"cheers1": { "x": 6.37, "width": 90, "height": 90 },
+			"cheers3": { "width": 90, "height": 90 },
+			"cheers4": { "width": 90, "height": 90 },
+			"cheers5": { "width": 90, "height": 90 },
+			"cheers6": { "width": 90, "height": 90 },
+			"cheers7": { "width": 90, "height": 90 }
+		}
+	}
+},
+"animations": {
+	"animation1": {
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"animation2": {
+		"slots": {
+			"hfgj": {
+				"attachment": [
+					{ "time": 0, "name": "cheers3" },
+					{ "time": 0.3333, "name": "cheers3" },
+					{ "time": 0.4333, "name": "cheers4" },
+					{ "time": 0.5333, "name": "cheers5" },
+					{ "time": 0.6333, "name": "cheers6" },
+					{ "time": 0.7333, "name": "cheers7" }
+				],
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.7333, "color": "ffffffff" },
+					{ "time": 2, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.5, "y": 1.5 }
+				]
+			}
+		}
+	}
+}
+}

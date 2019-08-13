@@ -1,0 +1,47 @@
+
+ganbei.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cheers1
+  rotate: false
+  xy: 2, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+cheers3
+  rotate: false
+  xy: 2, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+cheers4
+  rotate: false
+  xy: 94, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+cheers5
+  rotate: false
+  xy: 94, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+cheers6
+  rotate: false
+  xy: 186, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+cheers7
+  rotate: false
+  xy: 186, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1

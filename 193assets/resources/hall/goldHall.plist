@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>goldHall/activity.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{373,352},{127,153}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{127,153}</string>
+			</dict>
+			<key>goldHall/back.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{526,352},{103,143}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{103,143}</string>
+			</dict>
+			<key>goldHall/btn1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{373,263},{230,89}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{230,89}</string>
+			</dict>
+			<key>goldHall/btn2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{373,173},{230,90}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{230,90}</string>
+			</dict>
+			<key>goldHall/choosePlayWay.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{165,954},{208,41}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{208,41}</string>
+			</dict>
+			<key>goldHall/downArrow.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{690,954},{38,31}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{38,31}</string>
+			</dict>
+			<key>goldHall/enterClub.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{373,90},{268,83}}</string>
+				<key>offset</key>
+				<string>{2,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{271,83}</string>
+			</dict>
+			<key>goldHall/hot.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{603,173},{81,84}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{81,84}</string>
+			</dict>
+			<key>goldHall/new.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{603,254},{81,84}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{81,84}</string>
+			</dict>
+			<key>goldHall/people.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{690,992},{27,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,32}</string>
+			</dict>
+			<key>goldHall/playwayBg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{373,0},{307,90}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{307,90}</string>
+			</dict>
+			<key>goldHall/redDot.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{999,0},{20,20}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{20,20}</string>
+			</dict>
+			<key>goldHall/room1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{309,477}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{309,477}</string>
+			</dict>
+			<key>goldHall/room2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,477},{309,477}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{309,477}</string>
+			</dict>
+			<key>goldHall/room3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{690,0},{309,477}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{309,477}</string>
+			</dict>
+			<key>goldHall/room4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{690,477},{309,477}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{309,477}</string>
+			</dict>
+			<key>goldHall/sep.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1007},{690,2}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{690,2}</string>
+			</dict>
+			<key>goldHall/tipBg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,954},{165,53}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{165,53}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>goldHall.png</string>
+			<key>realTextureFileName</key>
+			<string>goldHall.png</string>
+			<key>size</key>
+			<string>{1019,1024}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1019</integer>
+			<key>height</key>
+			<integer>1024</integer>
+		</dict>
+	</dict>
+</plist>
