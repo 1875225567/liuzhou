@@ -7,7 +7,7 @@ cc.Class({
     properties: {
         bgmVolume: 1.0, //背景音量
         sfxVolume: 1.0, //音效音量
-        bgmAudioID: -1, //背景音乐id
+        bgmAudioID: -1  //背景音乐id
     },
 
     // use this for initialization
@@ -43,7 +43,8 @@ cc.Class({
             var self = this;
             //不关闭音效或者是语音播放
             cc.loader.loadRes(audioUrl, cc.AudioClip, function (err, clip) {
-                cc.audioEngine.play(clip, false, self.sfxVolume);
+                /*let sfxId = */cc.audioEngine.play(clip, false, self.sfxVolume);
+                //cc.log("音效长度哦",cc.audioEngine.getDuration(sfxId));
             });
         }
     },

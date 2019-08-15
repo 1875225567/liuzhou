@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "375e2710-1422-43b3-97bc-10b957d86af9",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "guild_bg": {
+      "ver": "1.0.3",
+      "uuid": "68ef37a4-f74d-420c-962a-7e7c503d489d",
+      "rawTextureUuid": "375e2710-1422-43b3-97bc-10b957d86af9",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 150,
+      "height": 256,
+      "rawWidth": 150,
+      "rawHeight": 256,
+      "borderTop": 28,
+      "borderBottom": 28,
+      "borderLeft": 32,
+      "borderRight": 24,
+      "subMetas": {}
+    }
+  }
+}

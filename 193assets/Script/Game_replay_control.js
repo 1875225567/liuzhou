@@ -693,7 +693,7 @@ cc.Class({
             if (isMine) {
                 cc.vv.audioMgr.playSFX('win', 'mp3');
             } else {
-                cc.vv.audioMgr.playSFX('lost', 'mp3');
+                cc.vv.audioMgr.playSFX('lose', 'mp3');
             }
             if (this.hupaizhanji_layer == null) {
                 this.waiting_layer.active = true;

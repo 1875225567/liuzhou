@@ -124,6 +124,14 @@ cc.Class({
                 }
             }
         }
+
+        cc.log(cc.vv.Global.club_id);
+        if(cc.vv.Global.club_id && "" != cc.vv.Global.club_id){
+            cc.loadingControl.waiting_layer.active = true;
+            cc.loadingControl.waiting_lab.string = '加载中';
+            this.getClubLevel();
+            this.enterClub();
+        }
     },
 
     onReturnCheckData: function (data) {
@@ -453,7 +461,7 @@ cc.Class({
             }
             case 'club_scene': //俱乐部界面
             {
-                this.club_layer.active = false;
+                if(this.club_layer && this.club_layer.active) this.club_layer.active = false;
                 if (this.club_scene == null) {
                     cc.loadingControl.waiting_layer.active = true;
                     cc.loadingControl.waiting_lab.string = '加载中';
@@ -849,5 +857,49 @@ cc.Class({
         } else {
             this.showMsg(data.msg);
         }
+    },
+
+    /**
+     * 请求自己在俱乐部的成员等级
+     */
+    getClubLevel:function(){
+        var postData = {
+            "mid": cc.vv.userData.mid,
+            "club_id": cc.vv.Global.club_id
+        };
+
+        let url = cc.vv.http.URL;
+        cc.vv.http.sendRequest(url + "my_club_info", postData, function(data){
+            cc.log(data);
+            if (data.msg) {
+                this.showMsg(data.msg);
+                cc.loadingControl.waiting_layer.active = false;
+            }
+            if (1 == data.status) {
+                this.club_level = data.data.my_info.status;
+                this.club_status = data.data.club.status;
+            }
+        }.bind(this));
+    },
+
+    /**
+     * 获取俱乐部信息，并进入俱乐部场景
+     */
+    enterClub: function () {
+        var postData = {
+            "club_id": cc.vv.Global.club_id
+        };
+        let url = cc.vv.http.URL;
+        cc.vv.http.sendRequest(url + "club_index", postData, function(data){
+            cc.log(data);
+            if (data.msg) {
+                this.showMsg(data.msg);
+                cc.loadingControl.waiting_layer.active = false;
+            }
+            if(1 == data.status){
+
+                this.onToggleView("club_scene",data.data);
+            }
+        }.bind(this));
     }
 });

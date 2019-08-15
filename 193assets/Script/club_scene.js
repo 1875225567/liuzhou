@@ -31,18 +31,19 @@ cc.Class({
         this.join_number = null; //申请玩家数量
         this.ban_uid = null;     //被禁赛玩家ID
         this.wanfa_list = null;  //玩法列表
-        this.is_all_room = true; //是否显示所有玩法
+        this.is_all_room = [0,0];   //是否加载完所有玩法
         this.wanfa_num = -1;     //当前玩法数字
         this.all_new = 0;        //当前玩法房间数量
         this.club_lock = 0;      //俱乐部功能是否解锁；1、已解锁；0、未解锁
         this.kaifang = 0;        //普通玩家可开私人房；1、可以；0、不行
-        this.push_zuan = 0;     //充值钻石；0、取出；1、充值
-        this.begin_x = 561;     //喇叭开始坐标
-        this.end_x = -25;       //喇叭初始结束坐标
+        this.push_zuan = 0;      //充值钻石；0、取出；1、充值
+        this.begin_x = 561;      //喇叭开始坐标
+        this.end_x = -25;        //喇叭初始结束坐标
     },
 
     onOpenView: function (data) {
         cc.log(data);
+        cc.loadingControl.waiting_layer.active = false;
         this.loadResTexture(cc.loadingControl.splashScene, 'big_bg/hallbg_6');
         cc.hallControl.ui_layer.active = false;
         this.initView();
@@ -98,14 +99,14 @@ cc.Class({
      */
     showButton: function () {
         let btn0 = cc.find("regularVersion/left_bg/view/content/btn_3", this.node);
-        //let btn1 = cc.find("teaHouseEdition/left_bg/view/content/btn_4" ,this.node);
+        let btn1 = cc.find("teaHouseEdition/left_bg/view/content/btn_4" ,this.node);
 
         if (3 == cc.hallControl.club_level) {
             btn0.active = true;
-            //btn1.active = true;
+            btn1.active = true;
         } else {
             btn0.active = false;
-            //btn1.active = false;
+            btn1.active = false;
         }
 
         let btn_5 = cc.find("bottom_bg/zuan_bg/btn_addzuan", this.node);
@@ -130,11 +131,11 @@ cc.Class({
                 this.changeClub();
                 break;
             }
-            case 'member': //成员列表
-            case 'rank': //排行榜
-            case 'record': //战绩
-            case 'statistics': //场次统计
-            case 'details': //俱乐部详情
+            case 'member':      //成员列表
+            case 'rank':        //排行榜
+            case 'record':      //战绩
+            case 'statistics':  //场次统计
+            case 'details':     //俱乐部详情
             {
                 cc.log(this.club_lock);
                 if (0 == this.club_lock) {
@@ -142,6 +143,26 @@ cc.Class({
                     return;
                 }
                 this.onToggleView(type.toString());
+                break;
+            }
+            case 'cooperation':  //群合作
+            {
+                let node = this.node.getChildByName("hezuo");
+                if (node.active) {
+                    node.active = false;
+                    node.x = -320;
+                    node.y = -135;
+                } else {
+                    cc.log(event.target);
+                    let worldPos = event.target.parent.convertToWorldSpaceAR(event.target.position);
+                    let pos = node.convertToNodeSpaceAR(worldPos);
+                    node.position = pos;
+                    if(182 == event.target.width) node.x -= 120;
+                    else node.x -= 150;
+                    node.y -= 132.5;
+                    cc.log(node.position);
+                    node.active = true
+                }
                 break;
             }
             case 'check': {
@@ -326,6 +347,11 @@ cc.Class({
                 break;
             }
             case 'join_room': {
+                if (cc.vv.Global.room_id) {
+                    cc.loginControl.sendJoinRoom(cc.vv.Global.room_id);
+                    return;
+                }
+
                 this.joinRoom();
                 break;
             }
@@ -362,6 +388,15 @@ cc.Class({
                 cc.loadingControl.onToggleView('notice_layer', '此功能正在开发中，敬请期待');
                 break;
             }
+            case "kick_0":
+            case "kick_1":
+            case "kick_2":
+            case "kick_3":
+            {
+                let num = parseInt(type[type.length - 1]);
+                this.kickPlayer(num);
+                break;
+            }
         }
     },
 
@@ -381,43 +416,12 @@ cc.Class({
     },
 
     /**
-     * 显示全部玩法/单个玩法的房间
-     */
-    showWanfaRooms: function () {
-        let guize_id, j = 0;
-        if (-1 == this.wanfa_num) {
-            this.is_all_room = true;
-            for (let i = 0; i < this.wanfa_list.length; i++) {
-                if (2 == this.wanfa_list[i].type) {
-                    if (0 == j) {
-                        this.all_new = 0;
-                    }
-                    guize_id = this.wanfa_list[i].guize_id;
-                    this.getClubRoom(guize_id);
-                    j++;
-                }
-            }
-        } else {
-            for (let i = 0; i < this.wanfa_list.length; i++) {
-                if (2 == this.wanfa_list[i].type) {
-                    if (this.wanfa_num == j) {
-                        this.is_all_room = false;
-                        guize_id = this.wanfa_list[i].guize_id;
-                        this.getClubRoom(guize_id);
-                        break;
-                    }
-                    j++;
-                }
-            }
-        }
-    },
-
-    /**
      * 加载俱乐部弹窗
      */
     onToggleView: function (type, data, callback) {
         switch (type) {
-            case 'member': {
+            case 'member':
+            {
                 this.closeCheckJoin();
                 if (this.member_layer == null) {
                     cc.loadingControl.waiting_layer.active = true;
@@ -437,7 +441,8 @@ cc.Class({
                 }
                 break;
             }
-            case 'rank': {
+            case 'rank':
+            {
                 if (this.rank_layer == null) {
                     cc.loadingControl.waiting_layer.active = true;
                     cc.loadingControl.waiting_lab.string = '加载中';
@@ -456,7 +461,8 @@ cc.Class({
                 }
                 break;
             }
-            case 'record': {
+            case 'record':
+            {
                 if (this.record_layer == null) {
                     cc.loadingControl.waiting_layer.active = true;
                     cc.loadingControl.waiting_lab.string = '加载中';
@@ -474,7 +480,8 @@ cc.Class({
                 }
                 break;
             }
-            case 'statistics': {
+            case 'statistics':
+            {
                 if (this.statistics_layer == null) {
                     cc.loadingControl.waiting_layer.active = true;
                     cc.loadingControl.waiting_lab.string = '加载中';
@@ -492,7 +499,8 @@ cc.Class({
                 }
                 break;
             }
-            case 'details': {
+            case 'details':
+            {
                 if (this.details_layer == null) {
                     cc.loadingControl.waiting_layer.active = true;
                     cc.loadingControl.waiting_lab.string = '加载中';
@@ -511,7 +519,8 @@ cc.Class({
                 }
                 break;
             }
-            case 'create_layer': {
+            case 'create_layer':
+            {
                 //let kf = cc.find("bottom_bg/kf_bg",this.node);
                 //kf.active = false;
                 this.getClubGames();
@@ -601,8 +610,13 @@ cc.Class({
         cc.vv.http.sendRequest(url + "club_games", postData, this.dealClubGameData.bind(this));
     },
 
+    /**
+     * 俱乐部全部玩法回调
+     * @param data 玩法数据
+     */
     dealClubGameData: function (data) {
         cc.log(data);
+        if (data.msg) cc.hallControl.showMsg(data.msg);
         if (1 == data.status) {
             this.wanfa_list = data.data;
             if (0 == this.wanfa_list.length) {
@@ -624,6 +638,9 @@ cc.Class({
         }
     },
 
+    /**
+     * 显示玩法
+     */
     show_wanfa: function () {
         let togArr = cc.find("top_bg/toggleContainer", this.node);
 
@@ -653,13 +670,43 @@ cc.Class({
     },
 
     /**
+     * 显示全部玩法/单个玩法的房间
+     */
+    showWanfaRooms: function () {
+        let guize_id, j = 0;
+        this.is_all_room = [0,0];
+        if (-1 == this.wanfa_num) {
+            for (let i = 0; i < this.wanfa_list.length; i++) {
+                if (2 == this.wanfa_list[i].type) {
+                    if (0 == j) this.all_new = 0;
+                    guize_id = this.wanfa_list[i].guize_id;
+                    this.getClubRoom(guize_id);
+                    j++;
+                }
+            }
+            this.is_all_room[0] = j
+        } else {
+            for (let i = 0; i < this.wanfa_list.length; i++) {
+                if (2 == this.wanfa_list[i].type) {
+                    if (this.wanfa_num == j) {
+                        this.all_new = -1;
+                        guize_id = this.wanfa_list[i].guize_id;
+                        this.getClubRoom(guize_id);
+                        break;
+                    }
+                    j++;
+                }
+            }
+        }
+    },
+
+    /**
      * 请求俱乐部房间列表
      */
     getClubRoom: function (gid) {
         let node_0 = cc.find("top_bg/toggleGroup/toggle1", this.node).getComponent(cc.Toggle);
         let sta = 0;
         if (!node_0.isChecked) sta = 1;
-
         if (this.fast_boolen) sta = 0;
 
         var postData = {
@@ -673,7 +720,6 @@ cc.Class({
 
     dealClubRoomData: function (data) {
         cc.log(data);
-        //return;
         if (1 == data.status) {
             let content = cc.find("scrollView/view/content", this.show_node);
             let arr = data.data;
@@ -686,17 +732,15 @@ cc.Class({
                 str = "item_list_r";
             }
 
-            let len, i, j = 0;
+            let len, i = 0, j = 0;
             let child_arr = content.children;
             let child_len = content.childrenCount;
-            if (this.is_all_room) {
+            if (-1 != this.all_new) {
                 i = this.all_new;
                 len = i + arr.length;
-                if (0 == this.all_new) {
-                    this.room_list = [];
-                }
+                if (0 == this.all_new) this.room_list = [];
+                this.is_all_room[1] += 1
             } else {
-                i = 0;
                 len = arr.length;
                 this.room_list = [];
             }
@@ -725,11 +769,57 @@ cc.Class({
 
             this.all_new = len;
 
-            if (this.fast_boolen) {
+            //cc.log("打印中",this.is_all_room);
+            if (this.fast_boolen && this.is_all_room[0] == this.is_all_room[1]) {
                 this.fastJoinRoom();
                 this.fast_boolen = false;
             }
         }
+    },
+
+    /**
+     * 快速加入游戏
+     */
+    fastJoinRoom: function () {
+        if (0 == this.room_list.length) {
+            cc.loadingControl.waiting_layer.active = false;
+            cc.hallControl.showMsg("暂无空余房间");
+            return
+        }
+
+        let roomList = [], rid, info;
+        for (let i = 0; i < this.room_list.length; i++) {
+            if (0 < this.room_list[i].userInfo.length) {
+                let obj = this.room_list[i];
+                roomList.push(obj)
+            }
+        }
+        cc.log(roomList,this.room_list);
+
+        if (1 < roomList.length) {
+            for (let i = 0; i < roomList.length - 1; i++) {
+                let info_0 = roomList[i].userInfo.length;
+                let info_1 = roomList[i + 1].userInfo.length;
+                info = roomList[i];
+                if (info_0 > info_1) {
+                    info = roomList[i];
+                }
+            }
+            //cc.log(info);
+
+            rid = info.roomInfo.guize.room_id;
+        } else if (1 == roomList.length) {
+            rid = roomList[0].roomInfo.guize.room_id;
+        } else {
+            rid = this.room_list[0].roomInfo.guize.room_id;
+        }
+
+        cc.vv.WebSocket.sendWS("RoomController", "join", {
+            "mid": cc.vv.userData.mid,
+            'room_id': rid
+        });
+
+        this.room_list.splice(0, 1)
     },
 
     /**
@@ -775,50 +865,6 @@ cc.Class({
         cc.hallControl.ui_layer.active = true;
         this.loadResTexture(cc.loadingControl.splashScene, 'big_bg/hallbg_' + cc.vv.userData.bg_index);
         this.node.active = false;
-    },
-
-    /**
-     * 快速加入游戏
-     */
-    fastJoinRoom: function () {
-        if (0 < this.room_list.length) {
-            let roomList = [],
-                rid, info;
-            for (let i = 0; i < this.room_list.length; i++) {
-                if (0 < this.room_list[i].userInfo.length) {
-                    let obj = this.room_list[i];
-                    roomList.push(obj)
-                }
-            }
-
-            if (1 < roomList.length) {
-                for (let i = 0; i < roomList.length - 1; i++) {
-                    let info_0 = roomList[i].userInfo.length;
-                    let info_1 = roomList[i + 1].userInfo.length;
-                    info = roomList[i];
-                    if (info_0 > info_1) {
-                        info = roomList[i];
-                    }
-                }
-                //cc.log(info);
-
-                rid = info.roomInfo.guize.room_id;
-            } else if (1 == roomList.length) {
-                rid = roomList[0].roomInfo.guize.room_id;
-            } else {
-                rid = this.room_list[0].roomInfo.guize.room_id;
-            }
-
-            cc.vv.WebSocket.sendWS("RoomController", "join", {
-                "mid": cc.vv.userData.mid,
-                'room_id': rid
-            });
-
-            this.room_list.splice(0, 1)
-        } else {
-            cc.loadingControl.waiting_layer.active = false;
-            cc.hallControl.showMsg("暂无空余房间");
-        }
     },
 
     /**
@@ -953,7 +999,20 @@ cc.Class({
     },
 
     /**
-     * 显示俱乐部底部文本数据
+     * 踢玩家
+     */
+    kickPlayer: function (num) {
+        cc.vv.WebSocket.sendWS('RoomController', 'remove', {
+            mid: cc.vv.userData.mid,
+            uid: this.tea_data.userInfo[num].id,
+            room_id: this.tea_data.roomInfo.guize.room_id
+        });
+        let tea = this.node.getChildByName("teaRoom");
+        tea.active = false;
+    },
+
+    /**
+     * 显示茶楼模式下玩法房间
      */
     showTeaRoom: function (data) {
         let tea = this.node.getChildByName("teaRoom");

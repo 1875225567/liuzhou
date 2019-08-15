@@ -133,6 +133,7 @@ cc.Class({
                 this.onGetHu(data.data);
                 break;
             }
+            case "remove": //有人被踢出房间
             case 'lizuo': //离座
             {
                 this.onGetLizuo(data.data);
@@ -190,13 +191,13 @@ cc.Class({
             }
             case 'club_rooms_change': //俱乐部房间有变化
             {
-                if(cc.clubControl) cc.clubControl.getClubGames();
+                if(cc.clubControl && cc.clubControl.node.active) cc.clubControl.getClubGames();
                 break;
             }
             case 'club_games_change': //俱乐部玩法有变化
             {
                 if(data.mid == cc.vv.userData.mid) return;
-                if(cc.clubControl) cc.clubControl.getClubGames();
+                if(cc.clubControl && cc.clubControl.node.active) cc.clubControl.getClubGames();
                 break;
             }
             case 'ready': //有玩家准备好了

@@ -79,6 +79,7 @@ cc.Class({
         let url = cc.vv.http.URL;
         cc.vv.http.sendRequest(url + "my_club_info", postData, function(data){
             cc.log(data);
+            if (data.msg) cc.hallControl.showMsg(data.msg);
             if (1 == data.status) {
                 cc.hallControl.club_level = data.data.my_info.status;
                 cc.hallControl.club_status = data.data.club.status;
@@ -95,8 +96,9 @@ cc.Class({
         };
         let url = cc.vv.http.URL;
         cc.vv.http.sendRequest(url + "club_index", postData, function(data){
+            cc.log(data);
+            if (data.msg) cc.hallControl.showMsg(data.msg);
             if(1 == data.status){
-                cc.log(data);
 
                 cc.hallControl.onToggleView("club_scene",data.data);
             }

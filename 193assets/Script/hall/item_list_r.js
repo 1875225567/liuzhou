@@ -10,7 +10,7 @@ cc.Class({
     },
 
     onOpenView: function (data) {
-        //cc.log(data);
+        cc.log(data);
         this.showBtn();
         this.roomInfo = data.roomInfo;
         this.userInfo = data.userInfo;
@@ -30,21 +30,28 @@ cc.Class({
 
         let num = parseInt(data.roomInfo.guize.renshu);
         let num_0 = data.userInfo.length;
-        for(let i = 0; i < 4; i++){
+            for(let i = 0; i < 4; i++){
             let node = this.node.getChildByName("seat_" + i);
             let ti = node.getChildByName("button");
+            let label_0 = node.getChildByName("label_name").getComponent(cc.Label);
+            let label_1 = node.getChildByName("label_id").getComponent(cc.Label);
             if(i < num){
                 node.active = true;
                 ti.active = false;
                 if(i < num_0){
                     if(3 == cc.hallControl.club_level || 2 == cc.hallControl.club_level){
-                        //ti.active = true;
+                        ti.active = true;
                     }
                     let remoteUrl = data.userInfo[i].headimgurl;
                     cc.hallControl.loadHeadTexture(node,remoteUrl);
+                    let str = cc.vv.Global.getNameThree(data.userInfo[i].nickname);
+                    label_0.string = str;
+                    label_1.string = "ID" + data.userInfo[i].id;
                 }else{
                     //cc.log("头像还原");
                     node.getComponent(cc.Sprite).spriteFrame = this.head;
+                    label_0.string = "";
+                    label_1.string = "";
                 }
             }else{
                 node.active = false;
@@ -67,6 +74,11 @@ cc.Class({
             }
             case "join":
             {
+                if (cc.vv.Global.room_id) {
+                    cc.loginControl.sendJoinRoom(cc.vv.Global.room_id);
+                    return;
+                }
+
                 this.joinRoom();
                 break;
             }
@@ -75,12 +87,13 @@ cc.Class({
                 cc.loadingControl.onToggleView('notice_layer', '已复制，是否跳转到微信？', this.shareRoom.bind(this));
                 break;
             }
-            case "lizuo":
+            case "kick_0":
+            case "kick_1":
+            case "kick_2":
+            case "kick_3":
             {
-                cc.vv.WebSocket.sendWS('RoomController', 'lizuo', {
-                    mid: cc.vv.userData.mid,
-                    room_id: this.roomInfo.guize.room_id
-                });
+                let num = parseInt(type[type.length - 1]);
+                this.kickPlayer(num);
                 break;
             }
         }
@@ -141,6 +154,17 @@ cc.Class({
         cc.vv.WebSocket.sendWS("RoomController", "join", {
             "mid": cc.vv.userData.mid,
             'room_id': this.roomInfo.guize.room_id
+        });
+    },
+
+    /**
+     * 踢玩家
+     */
+    kickPlayer: function (num) {
+        cc.vv.WebSocket.sendWS('RoomController', 'remove', {
+            mid: cc.vv.userData.mid,
+            uid: this.userInfo[num].id,
+            room_id: this.roomInfo.guize.room_id
         });
     }
 });

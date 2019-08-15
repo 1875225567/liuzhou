@@ -77,7 +77,7 @@ cc.Class({
             for(let i = 0; i < strArr.length; i++){
                 if(undefined != userData[strArr[i]]){
                     this[strArr[i]] = userData[strArr[i]];
-                    cc.log(strArr[i],this[strArr[i]], userData[strArr[i]]);
+                    //cc.log(strArr[i],this[strArr[i]], userData[strArr[i]]);
                 }
             }
         }

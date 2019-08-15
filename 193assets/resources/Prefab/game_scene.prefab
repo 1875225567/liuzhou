@@ -4456,7 +4456,7 @@
     },
     "component": "Game_control",
     "handler": "onClickBtn",
-    "customEventData": "back"
+    "customEventData": "back_0"
   },
   {
     "__type__": "cc.Widget",
@@ -12291,7 +12291,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 235,
+      "width": 234,
       "height": 88
     },
     "_rotationX": 0,
@@ -12361,7 +12361,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -72,
+      "x": -71.5,
       "y": 10
     },
     "_skewX": 0,
@@ -12434,7 +12434,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 40,
+    "_actualFontSize": 22,
     "_fontSize": 22,
     "_lineHeight": 26,
     "_enableWrapText": true,
@@ -12615,7 +12615,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -0.5,
+      "x": 0,
       "y": 10
     },
     "_skewX": 0,
@@ -12688,7 +12688,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 40,
+    "_actualFontSize": 22,
     "_fontSize": 22,
     "_lineHeight": 26,
     "_enableWrapText": true,
@@ -12860,8 +12860,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 52,
-      "height": 54
+      "width": 51,
+      "height": 50
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -12942,7 +12942,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 40,
+    "_actualFontSize": 22,
     "_fontSize": 22,
     "_lineHeight": 26,
     "_enableWrapText": true,
@@ -12977,7 +12977,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "1c9a4cda-2149-4f98-a0e4-217ffece2c86"
+      "__uuid__": "a0021367-8a9e-411e-a58c-7271da3738e3"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -13059,7 +13059,7 @@
     },
     "component": "Game_control",
     "handler": "onClickBtn",
-    "customEventData": "back"
+    "customEventData": "back_1"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -13110,7 +13110,7 @@
     "_enabled": true,
     "_layoutSize": {
       "__type__": "cc.Size",
-      "width": 235,
+      "width": 234,
       "height": 88
     },
     "_resize": 1,

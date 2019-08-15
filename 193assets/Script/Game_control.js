@@ -135,6 +135,7 @@ cc.Class({
         this.paiAndTing = null; //打的牌与操作牌的关系
         this.broadcostTime_arr = [-1, -1, -1, -1]; //离线时长数组
         this.interactive_time = 0; //互动表情限制时长
+        this.player_number = 0; //互动表情限制时长
     },
 
     onLoad: function () {
@@ -175,7 +176,7 @@ cc.Class({
 
     onDestroy: function () {
         cc.vv.Global.room_id = null;
-        cc.vv.Global.club_id = null;
+        //cc.vv.Global.club_id = null;
         this.background.off(cc.Node.EventType.TOUCH_END, this.onClickBackGround, this);
         // this.btn_arr[5].off(cc.Node.EventType.TOUCH_START, this.onTouchVoiceStart, this);
         // this.btn_arr[5].off(cc.Node.EventType.TOUCH_END, this.onTouchVoiceEnd, this);
@@ -241,22 +242,31 @@ cc.Class({
         switch (type.toString()) {
             case 'gps_layer':
             case 'setting_layer':
-            case 'chat_layer': {
+            case 'chat_layer':
+            {
                 this.onToggleView(type.toString());
                 break;
             }
-            case 'jiesan': {
+            case 'jiesan':
+            {
+                cc.vv.Global.club_id = this.roomInfo.guize.club_id;
                 cc.loadingControl.onToggleView('notice_layer', '您是否请求解散房间？', this.callBackJiesan.bind(this));
                 break;
             }
-            case 'restart': {
+            case 'restart':
+            {
                 cc.loadingControl.onToggleView('notice_layer', '您是否要刷新游戏？', function () {
                     cc.audioEngine.stopAll();
                     cc.game.restart()
                 });
                 break;
             }
-            case 'back': {
+            case 'back_0':
+            case 'back_1':
+            {
+                //if(0 == type[type.length - 1])
+                cc.vv.Global.club_id = this.roomInfo.guize.club_id;
+                //else cc.vv.Global.club_id = "";
                 cc.loadingControl.onToggleView('notice_layer', '是否返回大厅？', this.callBackHall.bind(this));
                 break;
             }
@@ -294,18 +304,21 @@ cc.Class({
                 }
                 break;
             }
-            case 'rule_left': {
+            case 'rule_left':
+            {
                 this.onToggleRule(true);
                 break;
             }
-            case 'rule_right': {
+            case 'rule_right':
+            {
                 this.onToggleTool(true);
                 break;
             }
             case 'player0':
             case 'player1':
             case 'player2':
-            case 'player3': {
+            case 'player3':
+            {
                 this.loadInteractive(type.toString());
                 break;
             }
@@ -783,6 +796,7 @@ cc.Class({
      */
     onReturnKaiju: function (data) {
         console.log("开局数据",data);
+        cc.log(this.userInfo);
         this.isKaiju = true;
         this.detectIp();
         this.zhuang = data.zhuang;
@@ -791,6 +805,9 @@ cc.Class({
         this.prepare_layer.active = false;
         this.game_layer.active = true;
         //console.log(this.player_id_arr);
+        let arr = Object.keys(this.userInfo);
+        cc.log(arr);
+        this.game_ren = arr.length;
         this.player_node_arr = [];
         this.player_node_arr[0] = this.game_layer.getChildByName("player0");
         this.player_node_arr[1] = this.game_layer.getChildByName("player1");
@@ -1114,15 +1131,6 @@ cc.Class({
             begin.x -= 160;
         }
 
-        // cc.log("听胡预警：", this.ting_hu);
-        // if(this.ting_hu && this.is_ting_hu){
-        //     for(let i in this.ting_hu){
-        //         if(this.ting_hu[i].pai == data.pais.pai){
-        //             this.ting_hu[i].num -= 1;
-        //             this.is_ting_hu = false;
-        //         }
-        //     }
-        // }
         this.handleBtn_arr_layer.getChildByName("handler0").active = true;
         this.showCaozuoPai();
     },
@@ -1298,7 +1306,7 @@ cc.Class({
     },
 
     /**
-     *
+     * 胡了
      * @param data
      */
     onReturnHu: function (data) {
@@ -1341,12 +1349,15 @@ cc.Class({
         //显示中鱼
         this.showFish(data);
 
+        let num = 0;
+        if(0 == cc.vv.userData.language_type) num = 4;
+        else num = 2;
         //展示胡牌信息
         this.scheduleOnce(function () {
             if (isMine) {
                 cc.vv.audioMgr.playSFX('win', 'mp3');
             } else {
-                cc.vv.audioMgr.playSFX('lost', 'mp3');
+                cc.vv.audioMgr.playSFX('lose', 'mp3');
             }
 
             if (this.hupaizhanji_layer == null) {
@@ -1363,15 +1374,17 @@ cc.Class({
                 this.hupaizhanji_layer.active = true;
                 this.hupaizhanji_layer.getComponent('hupaizhanji_layer').onOpenView(data);
             }
-        }.bind(this), 4);
+        }.bind(this), num);
     },
 
     /**
      * 显示中鱼
      * */
     showFish: function (data) {
+        cc.log(data);
         for (let i = 0; i < this.player_id_arr.length; i++) {
             let node = this.player_node_arr[i];
+            cc.log(this.player_id_arr[i]);
             for (let t = 0; t < data.hu_mid.length; t++) {
                 var yu_container = node.getChildByName("yu");
                 yu_container.removeAllChildren();
@@ -1590,8 +1603,8 @@ cc.Class({
                     this.broadcostTime_arr[i] = -1;
                     str += "已上线"
                 }
-                //this.schedule(this.doCountdownTime, 1);
-                this.schedule(this.doCountdownTime.bind(this), 1);
+                // this.schedule(this.doCountdownTime.bind(this), 1);
+                // this.doCountdownTime();
                 cc.loadingControl.showMsg(str);
                 break;
             }
@@ -1601,10 +1614,10 @@ cc.Class({
     //倒计时
     doCountdownTime: function () {
         //每秒更新显示信息
-        let num = 0,
-            number = 0,
+        let number = 0,
             tenNum = 0,
             res = 0;
+            // num = 0,
         for (var i = 0; i < this.player_id_arr.length; i++) {
             let node = cc.find("user/offline/label", this.player_node_arr[i]).getComponent(cc.Label);
             number = this.broadcostTime_arr[i];
@@ -1622,12 +1635,12 @@ cc.Class({
                 node.string = "已离线" + tenNum + ":" + res;
             } else {
                 node.string = "已离线";
-                num += 1;
+                // num += 1;
             }
         }
-        if (4 == num) {
-            this.unschedule(this.doCountdownTime);
-        }
+        // if (4 == num) {
+        //     this.unschedule(this.doCountdownTime);
+        // }
     },
 
     onReturnGetGame: function (data) {
@@ -1715,7 +1728,7 @@ cc.Class({
                 var element = data.pais[this.player_id_arr[i]];
                 //显示打出的牌
                 if (element.hasOwnProperty("d")) {
-                    let d = element["d"]; //对象 if(this.game_ren==2&&i==1){
+                    let d = element["d"]; //对象
                     this.onShowAllChuPai(dir, d);
                 }
                 //处理碰和明杠牌信息
@@ -2573,7 +2586,9 @@ cc.Class({
         return zIndex;
     },
 
-    /**获取打出牌的位置*/
+    /**
+     * 获取打出牌的位置
+     */
     getOutPaiPosByIndex: function (dir, index) {
         var row_num = 10;
         if (this.game_ren == 2) {
@@ -2620,7 +2635,7 @@ cc.Class({
                 this.send_index = maj.index;
                 cc.vv.WebSocket.sendWS("GameController", "dapai", {
                     "mid": cc.vv.userData.mid,
-                    'room_id': cc.vv.Global.room_id, //俱乐部id
+                    'room_id': cc.vv.Global.room_id,
                     'pai': maj.pai
                 });
             }
@@ -2953,6 +2968,7 @@ cc.Class({
      */
     changePlayerId: function () {
         cc.log("展示当前的用户信息");
+        this.player_id_arr = [];
         for (let i = 0; i < this.game_ren; i++) {
             this.player_id_arr[i] = 0;
         }
@@ -3011,7 +3027,7 @@ cc.Class({
                 this.player_id_arr[1] = id_arr[0];
             }
         }
-        //cc.log(this.player_id_arr);
+        cc.log(this.player_id_arr);
     },
 
     /**
@@ -3039,12 +3055,55 @@ cc.Class({
                 let node = this.player_node_arr[i];
                 let data = this.userInfo[id];
                 node.getChildByName("user").getChildByName("three").active = false;
-                for (let j in this.sanbi) {
-                    if (data.id.toString() === this.sanbi[j].toString()) {
-                        cc.log("三比玩家有：", data.id.toString());
-                        node.getChildByName("user").getChildByName("three").active = true;
-                    }
+
+                this.dealSanbi(data.id, node);
+            }
+        }
+    },
+
+    /**
+     * 处理三比数据
+     * @param id 玩家id
+     * @param node 玩家节点
+     */
+    dealSanbi:function(id, node){
+        let arr = [[], []];
+        for (let j in this.sanbi) {
+            let arr_0 = this.sanbi[j].split("-");
+            arr[0].push(parseInt(arr_0[0]));
+            arr[1].push(parseInt(arr_0[1]));
+        }
+
+        cc.log(arr);
+        for (let x = 0; x < arr[0].length; x++) {
+            let num_0 = arr[0][x];
+            for (let y = 0; y < arr[1].length; y++) {
+                let num_1 = arr[1][y];
+                if (num_0 == num_1) {
+                    arr[0].splice(x, 1);
+                    x--;
+                    break;
                 }
+            }
+        }
+
+        cc.log(arr);
+        //return;
+        for (let m = 0; m < arr[1].length; m++) {
+            if (id == arr[0][m]) {
+                cc.log("三比玩家有：", id.toString());
+                let san = node.getChildByName("user").getChildByName("three");
+                san.active = true;
+                let str_0 = "game/sanbi" + 0;
+                this.loadResTexture(san, str_0)
+            }
+
+            if (id == arr[1][m]) {
+                cc.log("三比玩家有：", id.toString());
+                let san = node.getChildByName("user").getChildByName("three");
+                san.active = true;
+                let str_1 = "game/sanbi" + 1;
+                this.loadResTexture(san, str_1)
             }
         }
     },
@@ -3084,12 +3143,13 @@ cc.Class({
             }
             node.getChildByName("user").getChildByName("three").active = false;
             if (node.getChildByName("yu")) node.getChildByName("yu").active = false;
-            for (let i in this.sanbi) {
-                if (data.id.toString() === this.sanbi[i].toString()) {
-                    cc.log("三比玩家有：", data.id.toString());
-                    node.getChildByName("user").getChildByName("three").active = true;
-                }
-            }
+            this.dealSanbi(data.id, node);
+            // for (let i in this.sanbi) {
+            //     if (data.id.toString() === this.sanbi[i].toString()) {
+            //         cc.log("三比玩家有：", data.id.toString());
+            //         node.getChildByName("user").getChildByName("three").active = true;
+            //     }
+            // }
 
             let head = head_node.getComponent(cc.Sprite);
             name_node.active = true;
@@ -3177,6 +3237,14 @@ cc.Class({
         //}
         if(0 == this.countTime % 60){
             //cc.log("一秒过去咯");
+            let bool = false;
+            for(let i = 0; i < this.broadcostTime_arr.length; i++){
+                if(-1 != this.broadcostTime_arr[i]){
+                    bool = true;
+                    break
+                }
+            }
+            if(bool) this.doCountdownTime();
         }
         if (this.countTime % 300 == 0) {
             this.updateCesu(); //每隔5秒测速一次
