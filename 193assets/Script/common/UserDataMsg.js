@@ -10,7 +10,7 @@ cc.Class({
 
     ctor: function () {
         this.id = "";   //用户名
-        this.version = "1.1.6";   //版本号
+        this.version = "1.2.2";   //版本号
 
         this.nickname = "测试名字";   //名字
         this.avatarUrl = "";  //头像地址
@@ -47,7 +47,8 @@ cc.Class({
         this.address = "";      //详细地址
         this.mobile = "";       //手机型号
         this.device = "";       //机器码
-        this.exitGame = false;  //是否要退出游戏
+        this.exitGame = false; //是否要退出游戏
+        this.XLcode = "";       //是否要退出游戏
 
     },
 

@@ -1,0 +1,24 @@
+签名文件密码   ：fymj@tmjh
+包名  ：com.fymj.app.keystore
+别名 alias :com.fymj.tmjh
+别名密码 ：fymj@tmjh
+
+
+ anysdk
+
+APPkey  :      EA438F7C-8959-BE39-7E55-AA8E50F69B53
+appsecret:     5b1de3d55ece012c2f67d12d4c72490a
+privateKey:    2C106802E0654F59858ACB2A8DA175A5
+
+获取订单地址
+http://pay.anysdk.com/v5/Order/getOrderId/
+
+
+
+w微信开放平台
+
+AppID: wx855c32034b4b2751
+
+AppSecret:7994abc271d8b6f23258871547cbe12d
+
+http://maanshanapp.tumujinhua.com/login.php

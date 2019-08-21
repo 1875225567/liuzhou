@@ -1,0 +1,19 @@
+
+jryouxi1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+13
+  rotate: false
+  xy: 268, 2
+  size: 143, 127
+  orig: 143, 127
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 2, 53
+  size: 264, 76
+  orig: 264, 76
+  offset: 0, 0
+  index: -1

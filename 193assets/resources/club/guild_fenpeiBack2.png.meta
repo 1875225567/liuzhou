@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "b893ac63-21cd-46e9-9c49-802d13605b99",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "guild_fenpeiBack2": {
+      "ver": "1.0.3",
+      "uuid": "1d98acc5-6a72-4b4a-8929-b431ce3ed7b2",
+      "rawTextureUuid": "b893ac63-21cd-46e9-9c49-802d13605b99",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 274,
+      "height": 98,
+      "rawWidth": 274,
+      "rawHeight": 98,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -36,6 +36,7 @@ cc.Class({
         this.xieyi_layer = null;
         this.user_phone = null;
         this.is_autoLogin = true;
+        this.xianliaoid = "";
     },
 
     onLoad: function () {
@@ -112,7 +113,7 @@ cc.Class({
                 var data = JSON.parse(v);
                 cc.vv.userData.version = data.version;
             } else {
-                cc.vv.userData.version = "1.1.6";
+                cc.vv.userData.version = "1.2.2";
             }
             this.isBake = false;
             this.isCheck = false;
@@ -205,9 +206,10 @@ cc.Class({
                 }
                 break;
             }
-            case 'liaobei': //聊呗登录
+            case 'xianliao': //闲聊登录
             {
                 this.closeCheckJoin();
+                this.xianLiaoLogin();
                 break;
             }
             case "wechat": //微信登录
@@ -238,6 +240,8 @@ cc.Class({
             {
                 if ("0" == this.user_phone) {
                     this.getBindCode();
+                } else if(-1 == this.user_phone){
+                    this.getXianCode();
                 } else {
                     this.getLoginCode();
                 }
@@ -245,7 +249,11 @@ cc.Class({
             }
             case "phone_login": //手机号验证登录
             {
-                this.loginPhone();
+                if(-1 == this.user_phone){
+                    this.loginXian();
+                } else {
+                    this.loginPhone();
+                }
                 break;
             }
         }
@@ -302,7 +310,36 @@ cc.Class({
             // cc.vv.userData.nickname = 'app开发';
             // cc.vv.userData.mid = mid;
             cc.vv.userData.sex = 1;
-            cc.vv.userData.version = "1.1.6";
+            cc.vv.userData.version = "1.2.2";
+            this.sendLoginGame();
+        }
+    },
+
+    /**
+     * 闲聊登录
+     */
+    xianLiaoLogin: function () {
+        cc.loadingControl.waiting_layer.active = true;
+        cc.loadingControl.waiting_lab.string = '请求登录闲聊';
+        if (cc.sys.isNative) {
+            if (cc.sys.os == cc.sys.OS_ANDROID) {
+                jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity", "loginXianLiao", "()V");
+            } else if (cc.sys.os == cc.sys.OS_IOS) {
+                jsb.reflection.callStaticMethod("RootViewController", "loginWeChat");
+            }
+        } else {
+            var id = this.ui_layer.getChildByName("EditBox").getComponent(cc.EditBox).string;
+            let mid = '1000' + id;
+            //let len = mid.toString().length;
+            cc.vv.userData.uid = 'ceshi00-ceshi0' + mid;
+            cc.vv.userData.nickname = '测试' + id;
+            // cc.vv.userData.uid = 'opSX90sBzNGinPiDe73PYokEOhIw';
+            // cc.vv.userData.nickname = '杨雪（APP开发）';
+            // cc.vv.userData.uid = 'opSX90n5jeR96tOAGNgZNfjH1G-E';
+            // cc.vv.userData.nickname = 'app开发';
+            // cc.vv.userData.mid = mid;
+            cc.vv.userData.sex = 1;
+            cc.vv.userData.version = "1.2.2";
             this.sendLoginGame();
         }
     },
@@ -350,6 +387,82 @@ cc.Class({
             cc.vv.userData.saveUserInfo();
             this.checkLoginData();
         }
+    },
+
+    /**
+     * 请求闲聊登录
+     */
+    sendXianLiao: function () {
+        console.log("请求闲聊登录");
+        cc.loadingControl.waiting_layer.active = true;
+        cc.loadingControl.waiting_lab.string = '请求登录中';
+        var postData = {
+            "xianliao_code": cc.vv.userData.XLcode,
+            "version": cc.vv.userData.version,
+            "address": cc.vv.userData.address,
+            "mobile": cc.vv.userData.mobile
+        };
+        let url = cc.vv.http.URL;
+        cc.vv.http.sendRequest(url + "xianliao_login", postData, this.onReturnXianLiao.bind(this));
+    },
+
+    /**
+     * 闲聊登录返回
+     */
+    onReturnXianLiao: function (data) {
+        console.log(data,data.status);
+        cc.loadingControl.waiting_layer.active = false;
+        if (data.status == 0) {
+            this.showMsg(data.msg);
+        } else if (data.status == 1) {
+            cc.vv.userData.headimgurl = data.data.headimgurl; //收到后端的玩家头像
+            cc.vv.userData.ip = data.data.ip; //收到后端的唯一id编号
+            cc.vv.userData.mid = data.data.mid; //收到后端的唯一id编号
+            cc.vv.userData.nickname = data.data.nickname; //收到后端的玩家昵称
+            cc.vv.userData.num = data.data.num; //收到后端的房卡数量
+            cc.vv.Global.room_id = data.data.room_id;
+            cc.vv.userData.sex = data.data.sex; //收到后端的玩家性别
+            cc.vv.userData.token = data.data.token; //收到后端token
+            cc.vv.Global.gid = data.data.hasOwnProperty('gid') ? data.data.gid : 0;
+            this.user_phone = data.data.phone; //收到后端的玩家手机号
+            this.checkLoginData();
+        } else if(2 == data.status){
+            console.log(data.data.xianliaoid);
+            this.xianliaoid = data.data.xianliaoid;
+            cc.vv.userData.headimgurl = data.data.headimgurl; //收到后端的玩家头像
+            cc.vv.userData.nickname = data.data.nickname; //收到后端的玩家昵称
+            this.user_phone = -1;
+            let pop = this.main_node.getChildByName("switch");
+            let lab = pop.getChildByName("label_title").getComponent(cc.Label);
+            lab.string = "手机号绑定";
+            let btn_0 = pop.getChildByName("btn_bind");
+            let btn_1 = pop.getChildByName("btn_login");
+            btn_0.active = false;
+            btn_1.active = true;
+            pop.active = true;
+        }
+    },
+
+    /**
+     * 获取闲聊登录验证码
+     */
+    getXianCode: function () {
+        let pop = this.main_node.getChildByName("switch");
+        let lab_0 = pop.getChildByName("editBox_0").getComponent(cc.EditBox);
+        if("" == lab_0.string){
+            this.showMsg("请输入手机号");
+            return
+        }
+        var postData = {
+            "phone": parseInt(lab_0.string),
+            "xianliaoid": this.xianliaoid
+        };
+        cc.log(postData);
+        let url = cc.vv.http.URL;
+        cc.vv.http.sendRequest(url + "xianliao_code", postData, function (data) {
+            cc.log(data);
+            if (data.msg) this.showMsg(data.msg);
+        }.bind(this));
     },
 
     /**
@@ -501,12 +614,8 @@ cc.Class({
         let pop = this.main_node.getChildByName("switch");
         let lab_0 = pop.getChildByName("editBox_0").getComponent(cc.EditBox);
         let lab_1 = pop.getChildByName("editBox_1").getComponent(cc.EditBox);
-        if("" == lab_0.string){
-            this.showMsg("请输入手机号");
-        }
-        if("" == lab_1.string){
-            this.showMsg("请输入验证码");
-        }
+        if("" == lab_0.string) this.showMsg("请输入手机号");
+        if("" == lab_1.string) this.showMsg("请输入验证码");
         var postData = {
             "phone": lab_0.string,
             "code": lab_1.string,
@@ -523,7 +632,7 @@ cc.Class({
             if (data.msg) this.showMsg(data.msg);
             if (1 == data.status) {
                 cc.vv.userData.headimgurl = data.data.headimgurl; //收到后端的玩家头像
-                cc.vv.userData.ip = data.data.ip; //收到后端的唯一id编号
+                cc.vv.userData.ip = data.data.ip; //收到后端的ip地址
                 cc.vv.userData.mid = data.data.mid; //收到后端的唯一id编号
                 cc.vv.userData.nickname = data.data.nickname; //收到后端的玩家昵称
                 cc.vv.userData.num = data.data.num; //收到后端的房卡数量
@@ -533,6 +642,54 @@ cc.Class({
                 cc.vv.Global.gid = data.data.hasOwnProperty('gid') ? data.data.gid : 0;
                 cc.vv.userData.login_phone = lab_0.string;
                 cc.vv.userData.saveUserInfo();
+                lab_0.string = "";
+                lab_1.string = "";
+                pop.active = false;
+                this.checkLoginData();
+            }
+        }.bind(this));
+    },
+
+    /**
+     * 闲聊绑定并登录
+     */
+    loginXian: function () {
+        let pop = this.main_node.getChildByName("switch");
+        let lab_0 = pop.getChildByName("editBox_0").getComponent(cc.EditBox);
+        let lab_1 = pop.getChildByName("editBox_1").getComponent(cc.EditBox);
+        if("" == lab_0.string){
+            this.showMsg("请输入手机号");
+            return
+        }
+        if("" == lab_1.string){
+            this.showMsg("请输入验证码");
+            return
+        }
+        var postData = {
+            "phone": lab_0.string,
+            "code": lab_1.string,
+            "address": cc.vv.userData.address,
+            "version": cc.vv.userData.version,
+            "mobile": cc.vv.userData.mobile,
+            "nickname": cc.vv.userData.nickname,
+            "headimgurl": cc.vv.userData.headimgurl,
+            "xianliaoid": this.xianliaoid
+        };
+        cc.log(postData);
+        let url = cc.vv.http.URL;
+        cc.vv.http.sendRequest(url + "xianliao_bind", postData, function (data) {
+            cc.log(data);
+            if (data.msg) this.showMsg(data.msg);
+            if (1 == data.status) {
+                cc.vv.userData.headimgurl = data.data.headimgurl; //收到后端的玩家头像
+                cc.vv.userData.ip = data.data.ip; //收到后端的ip地址
+                cc.vv.userData.mid = data.data.mid; //收到后端的唯一id编号
+                cc.vv.userData.nickname = data.data.nickname; //收到后端的玩家昵称
+                cc.vv.userData.num = data.data.num; //收到后端的房卡数量
+                cc.vv.Global.room_id = data.data.room_id;
+                cc.vv.userData.sex = data.data.sex; //收到后端的玩家性别
+                cc.vv.userData.token = data.data.token; //收到后端token
+                cc.vv.Global.gid = data.data.hasOwnProperty('gid') ? data.data.gid : 0;
                 lab_0.string = "";
                 lab_1.string = "";
                 pop.active = false;
@@ -794,7 +951,7 @@ cc.Class({
             "packageUrl": url + "/",
             "remoteManifestUrl": url + "/project.manifest",
             "remoteVersionUrl": url + "/version.manifest",
-            "version": "1.1.6",
+            "version": "1.2.2",
             "assets": {},
             "searchPaths": []
         });

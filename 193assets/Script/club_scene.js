@@ -31,7 +31,7 @@ cc.Class({
         this.join_number = null; //申请玩家数量
         this.ban_uid = null;     //被禁赛玩家ID
         this.wanfa_list = null;  //玩法列表
-        this.is_all_room = [0,0];   //是否加载完所有玩法
+        this.is_all_room = [0,0];//是否加载完所有玩法
         this.wanfa_num = -1;     //当前玩法数字
         this.all_new = 0;        //当前玩法房间数量
         this.club_lock = 0;      //俱乐部功能是否解锁；1、已解锁；0、未解锁
@@ -39,6 +39,7 @@ cc.Class({
         this.push_zuan = 0;      //充值钻石；0、取出；1、充值
         this.begin_x = 561;      //喇叭开始坐标
         this.end_x = -25;        //喇叭初始结束坐标
+        this.time_count = 0;     //update计时
     },
 
     onOpenView: function (data) {
@@ -1121,20 +1122,27 @@ cc.Class({
         };
         let url = cc.vv.http.URL;
         cc.vv.http.sendRequest(url + "club_join_list", postData, function (data) {
+            if (data.msg) cc.hallControl.showMsg(data.msg);
             if (data.status == 1) {
-                let arr = data.data;
-                this.join_number = arr.length;
-                let red_dot_0 = cc.find("regularVersion/left_bg/red_dot", this.node);
-                let red_dot_1 = cc.find("teaHouseEdition/left_bg/red_dot", this.node);
-                if (0 < arr.length) {
-                    red_dot_0.active = true;
-                    red_dot_1.active = true;
-                } else {
-                    red_dot_0.active = false;
-                    red_dot_1.active = false;
-                }
+                this.join_number = data.data.length;
+                this.changeRedDot();
             }
         }.bind(this));
+    },
+
+    /**
+     * 更新申请红点
+     */
+    changeRedDot:function(){
+        let red_dot_0 = cc.find("regularVersion/left_bg/red_dot", this.node);
+        let red_dot_1 = cc.find("teaHouseEdition/left_bg/red_dot", this.node);
+        if (0 < this.join_number) {
+            red_dot_0.active = true;
+            red_dot_1.active = true;
+        } else {
+            red_dot_0.active = false;
+            red_dot_1.active = false;
+        }
     },
 
     /**

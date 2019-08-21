@@ -160,7 +160,8 @@ cc.Class({
      * 初始化游戏场景
      */
     onOpenView: function () {
-        this.loadResTexture(cc.loadingControl.splashScene, 'big_bg/pz_bj');
+        //this.loadResTexture(cc.loadingControl.splashScene, 'big_bg/pz_bj');
+        this.loadResTexture(cc.loadingControl.splashScene, 'big_bg/roomBG_2');
         cc.vv.audioMgr.playBGM("bgm_game", "mp3");
         this.sendJinru();
     },

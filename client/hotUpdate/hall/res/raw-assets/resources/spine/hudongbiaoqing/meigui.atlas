@@ -1,0 +1,68 @@
+
+meigui.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+flower1
+  rotate: false
+  xy: 2, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+flower2
+  rotate: false
+  xy: 2, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+flower3
+  rotate: false
+  xy: 2, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+flower4
+  rotate: false
+  xy: 94, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+flower5
+  rotate: false
+  xy: 94, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+flower6
+  rotate: false
+  xy: 186, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+flower7
+  rotate: false
+  xy: 186, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+flower8
+  rotate: false
+  xy: 186, 2
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+flower9
+  rotate: false
+  xy: 278, 94
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1

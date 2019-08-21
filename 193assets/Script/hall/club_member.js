@@ -275,6 +275,7 @@ cc.Class({
             let len = arr.length;
             this.com.join_number = len;
             this.loadDot();
+            cc.clubControl.changeRedDot();
             let max_len = Math.max(len, child_len);
             for (var i = 0; i < max_len; ++i) {
                 let item = null;

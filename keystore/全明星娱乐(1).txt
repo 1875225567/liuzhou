@@ -1,0 +1,25 @@
+
+签名文件密码   ：qmxyl@tmjh
+包名  ：com.qmxyl.app.keystore
+别名 alias :com.qmxyl.tmjh
+别名密码 ：qmxyl@tmjh
+
+
+
+http://qmxyl.tumujinhua.com/login.php
+
+
+
+
+APP screat   包名对应的签名密码  38643976f2d5790c0e106987e4940cae
+AppID：wx280cdf7d5edee7c7
+AppSecret：311abc4259fed5d2a75c466351e6f51c    (废弃)
+
+
+0da1192183735195f3c05c9458c302b4
+0da1192183735195f3c05c9458c302b4
+
+
+
+
+微信开放平台：yx18939237527@139.com    密码：yangxue123

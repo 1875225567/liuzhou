@@ -8,7 +8,7 @@ cc.NativeMsg = {
 };
 
 /**
- * 微信登录成功后返回的用户数据
+ * 微信登录成功后返回的用户数据（安卓）
  * @param sex 性别
  * @param unionid uid
  * @param nickname 昵称
@@ -45,7 +45,10 @@ cc.NativeMsg.getLocation = function (latitude, longitude, address, bra, mod, dev
     cc.NativeMsg.isGetLocation = true;
 };
 
-//IOS通知用户信息
+
+/**
+ * 微信登录成功后返回的用户数据（IOS）
+ */
 cc.NativeMsg.callBackIOSUserInfo = function () {
     cc.loadingControl.showWaiting(false);
     var nickname = jsb.reflection.callStaticMethod("RootViewController", "getNickName");
@@ -78,4 +81,14 @@ cc.NativeMsg.backLocation = function () {
     cc.NativeMsg.address = address;
     cc.NativeMsg.mobile = bra + mod;
     cc.NativeMsg.isGetLocation = true;
+};
+
+/**
+ * 闲聊登录返回（安卓）
+ * @param code
+ */
+cc.NativeMsg.backXianLiao = function (code) {
+    console.log("闲聊登录返回",code);
+    cc.vv.userData.XLcode = code;
+    cc.loginControl.sendXianLiao();
 };

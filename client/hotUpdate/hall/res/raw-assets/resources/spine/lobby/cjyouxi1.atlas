@@ -1,0 +1,19 @@
+
+cjyouxi1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+6
+  rotate: false
+  xy: 2, 36
+  size: 269, 83
+  orig: 269, 83
+  offset: 0, 0
+  index: -1
+9
+  rotate: true
+  xy: 273, 2
+  size: 117, 122
+  orig: 117, 122
+  offset: 0, 0
+  index: -1

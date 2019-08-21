@@ -1,0 +1,88 @@
+{
+"skeleton": { "hash": "r1ljnvKlQl8owDQNbrnHc+OGlPI", "spine": "2.1.27", "width": 84, "height": 85, "images": "./image/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone2", "parent": "root" },
+	{ "name": "bone3", "parent": "root" }
+],
+"slots": [
+	{ "name": "hgfj", "bone": "bone2", "attachment": "2", "blend": "additive" },
+	{ "name": "lkjl", "bone": "bone3", "attachment": "zsx07", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"hgfj": {
+			"2": { "width": 84, "height": 85 }
+		},
+		"lkjl": {
+			"zsx00": { "width": 61, "height": 48 },
+			"zsx01": { "width": 61, "height": 48 },
+			"zsx02": { "width": 61, "height": 48 },
+			"zsx03": { "width": 61, "height": 48 },
+			"zsx04": { "width": 61, "height": 48 },
+			"zsx05": { "width": 61, "height": 48 },
+			"zsx06": { "width": 61, "height": 48 },
+			"zsx07": { "width": 61, "height": 48 },
+			"zsx08": { "width": 61, "height": 48 },
+			"zsx09": { "width": 61, "height": 48 },
+			"zsx10": { "width": 61, "height": 48 },
+			"zsx11": { "width": 61, "height": 48 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"hgfj": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2.8333, "color": "ffffff46" },
+					{ "time": 3.5, "color": "ffffffd1" },
+					{ "time": 4.1666, "color": "ffffff46" }
+				]
+			},
+			"lkjl": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2.1333, "name": "zsx11" },
+					{ "time": 2.2, "name": "zsx10" },
+					{ "time": 2.2666, "name": "zsx09" },
+					{ "time": 2.3333, "name": "zsx08" },
+					{ "time": 2.4, "name": "zsx07" },
+					{ "time": 2.4666, "name": "zsx06" },
+					{ "time": 2.5333, "name": "zsx05" },
+					{ "time": 2.6, "name": "zsx04" },
+					{ "time": 2.6666, "name": "zsx03" },
+					{ "time": 2.7333, "name": "zsx02" },
+					{ "time": 2.8, "name": "zsx01" },
+					{ "time": 2.8666, "name": "zsx00" },
+					{ "time": 2.9333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone2": {
+				"rotate": [
+					{ "time": 2.8333, "angle": 0 },
+					{ "time": 3.5, "angle": 170 },
+					{ "time": 4.1666, "angle": 340 }
+				],
+				"translate": [
+					{ "time": 2.8333, "x": -16.08, "y": 18.75, "curve": "stepped" },
+					{ "time": 4.1666, "x": -16.08, "y": 18.75 }
+				],
+				"scale": [
+					{ "time": 2.8333, "x": 0.3, "y": 0.3 },
+					{ "time": 3.5, "x": 1, "y": 1 },
+					{ "time": 4.1666, "x": 0.3, "y": 0.3 }
+				]
+			},
+			"bone3": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 3 }
+				]
+			}
+		}
+	}
+}
+}

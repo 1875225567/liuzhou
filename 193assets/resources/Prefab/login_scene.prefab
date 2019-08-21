@@ -1377,7 +1377,7 @@
     },
     "component": "Login_control",
     "handler": "onClickBtn",
-    "customEventData": "liaobei"
+    "customEventData": "xianliao"
   },
   {
     "__type__": "cc.Toggle",
@@ -3023,7 +3023,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 40,
+    "_actualFontSize": 32,
     "_fontSize": 32,
     "_lineHeight": 36,
     "_enableWrapText": true,

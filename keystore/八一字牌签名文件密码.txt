@@ -1,0 +1,24 @@
+
+签名文件密码   ：byzp@tmjh
+包名  ：com.byzp.app.keystore
+别名 alias :com.byzp.tmjh
+别名密码 ：byzp@tmjh
+
+
+
+http://byzp.tumujinhua.com/login.php
+http://xn--rssa833q8kb.com/login.php
+
+
+
+
+APP screat   包名对应的签名密码  f8a482bd6e80dbc50db5f024bd5a7960
+AppID：wxf73a97d0b2c981cc
+AppSecret：ac275a6fafd46158c88e7e2beafbabbd
+
+
+
+
+【fir.im】
+账号：13317720000@189.cn
+密码：TTAW0000

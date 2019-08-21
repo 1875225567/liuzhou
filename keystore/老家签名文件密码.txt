@@ -1,0 +1,5 @@
+
+签名文件密码   ：lj@tmjh
+包名  ：com.lj.app.keystore
+别名 alias :com.lj.tmjh
+别名密码 ：lj@tmjh

@@ -1,0 +1,47 @@
+
+tuoxie.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+242eshiGX_00
+  rotate: false
+  xy: 2, 143
+  size: 139, 139
+  orig: 139, 139
+  offset: 0, 0
+  index: -1
+242eshiGX_01
+  rotate: false
+  xy: 2, 2
+  size: 139, 139
+  orig: 139, 139
+  offset: 0, 0
+  index: -1
+242eshiGX_02
+  rotate: false
+  xy: 143, 143
+  size: 139, 139
+  orig: 139, 139
+  offset: 0, 0
+  index: -1
+242eshiGX_03
+  rotate: false
+  xy: 143, 2
+  size: 139, 139
+  orig: 139, 139
+  offset: 0, 0
+  index: -1
+shoe1
+  rotate: false
+  xy: 284, 192
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1
+shoe9
+  rotate: false
+  xy: 284, 100
+  size: 90, 90
+  orig: 90, 90
+  offset: 0, 0
+  index: -1

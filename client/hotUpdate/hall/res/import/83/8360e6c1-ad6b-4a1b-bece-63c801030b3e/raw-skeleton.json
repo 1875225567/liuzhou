@@ -1,0 +1,65 @@
+{
+"skeleton": { "hash": "E/u57ZsmNLhM2MgUt2FLXr5LNpc", "spine": "2.1.27", "width": 90, "height": 90, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" }
+],
+"slots": [
+	{ "name": "jhgk", "bone": "bone", "attachment": "flower1" }
+],
+"skins": {
+	"default": {
+		"jhgk": {
+			"flower1": { "width": 90, "height": 90 },
+			"flower2": { "width": 90, "height": 90 },
+			"flower3": { "width": 90, "height": 90 },
+			"flower4": { "width": 90, "height": 90 },
+			"flower5": { "width": 90, "height": 90 },
+			"flower6": { "width": 90, "height": 90 },
+			"flower7": { "width": 90, "height": 90 },
+			"flower8": { "width": 90, "height": 90 },
+			"flower9": { "width": 90, "height": 90 }
+		}
+	}
+},
+"animations": {
+	"animation1": {
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"animation2": {
+		"slots": {
+			"jhgk": {
+				"attachment": [
+					{ "time": 0, "name": "flower1" },
+					{ "time": 0.0666, "name": "flower2" },
+					{ "time": 0.1333, "name": "flower3" },
+					{ "time": 0.2, "name": "flower4" },
+					{ "time": 0.2666, "name": "flower5" },
+					{ "time": 0.3333, "name": "flower6" },
+					{ "time": 0.4, "name": "flower7" },
+					{ "time": 0.4666, "name": "flower8" },
+					{ "time": 0.5333, "name": "flower9" }
+				],
+				"color": [
+					{ "time": 0.5333, "color": "ffffffff" },
+					{ "time": 1.1666, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"scale": [
+					{ "time": 0, "x": 0.859, "y": 0.9 }
+				]
+			}
+		}
+	}
+}
+}

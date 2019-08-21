@@ -1,0 +1,22 @@
+
+签名文件密码   ：tmjh123456
+包名  ：com.jbyl.app.keystore
+别名 alias :com.jbyl.tmjh
+别名密码 ：tmjh123456
+
+
+http://nnyl.tumujinhua.com/login.php
+http://www.n3waa.cn/login.php
+
+
+
+
+APP screat   包名对应的签名密码    d77b4cfadcfa84f45e1fbf47de30b391
+				83cbbf30eec6bbd0d6b06f7467b19cac   -新生成  2019年1月23日11:15:35
+
+
+AppID：		wx01e293f67866dfb9
+AppSecret：	4f9ac563802f0e9028a0db965c04434a
+
+
+
